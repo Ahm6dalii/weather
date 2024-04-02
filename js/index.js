@@ -6,9 +6,8 @@ let form = document.forms;
 
 //& Variable
 let key = "31fa25d2a905450b97755900243103";
-let lat = 0;
-let lon = 0;
 
+//^Functions
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -16,19 +15,20 @@ function getLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-async function showPosition(position) {
+ function showPosition(position) {
   console.log(position);
   console.log(position.coords.latitude);
   let currentLoction =
     position.coords.latitude + "," + position.coords.longitude;
 
-  await getWeather(currentLoction);
+ getWeather(currentLoction);
 }
+
 getLocation();
 
-//^Functions
+
 async function getWeather(defaultLocation = "cairo") {
-  console.log(defaultLocation);
+  
   let weather = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=3&aqi=no&alerts=no`
   );
@@ -44,23 +44,26 @@ async function getWeather(defaultLocation = "cairo") {
   // console.log(forecast);
 }
 
-getWeather();
+
 
 function getDay(date) {
   let dat = new Date(`${date}`);
   let day = dat.toLocaleString("en-us", { weekday: "long" });
   return day;
 }
+
 function getDayAndMon(date) {
   let dat = new Date(`${date}`);
   let mon = dat.toLocaleString("en-us", { month: "long" });
-
   return dat.getDate() + mon;
 }
 
 function search() {
   let loc = searchInput.value;
-  // console.log(searchInput.value);
+  if(searchInput.value=="")
+  {
+    getLocation();
+  }
   getWeather(loc);
 }
 
@@ -155,6 +158,7 @@ form[0].addEventListener("click", function (e) {
 sendBtn.addEventListener("click", search);
 
 searchInput.addEventListener("change", search);
+
 
 for (let i = 0; i < list.length; i++) {
   list[i].addEventListener("click", (e) => {
