@@ -33,7 +33,7 @@ async function getWeather(defaultLocation ="cairo" ) {
 
   console.log(defaultLocation);
   let weather = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=3&aqi=no&alerts=no`
   );
   let data = await weather.json();
 
