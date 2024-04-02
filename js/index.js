@@ -6,8 +6,8 @@ let form = document.forms;
 
 //& Variable
 let key = "31fa25d2a905450b97755900243103";
-let lat=0;
-let lon=0;
+let lat = 0;
+let lon = 0;
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -19,18 +19,15 @@ function getLocation() {
 async function showPosition(position) {
   console.log(position);
   console.log(position.coords.latitude);
-  let currentLoction =position.coords.latitude+","+position.coords.longitude;
+  let currentLoction =
+    position.coords.latitude + "," + position.coords.longitude;
 
-  await getWeather(currentLoction)
-
+  await getWeather(currentLoction);
 }
 getLocation();
 
 //^Functions
-async function getWeather(defaultLocation ="cairo" ) {
-  
-
-
+async function getWeather(defaultLocation = "cairo") {
   console.log(defaultLocation);
   let weather = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=3&aqi=no&alerts=no`
