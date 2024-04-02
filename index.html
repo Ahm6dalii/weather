@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <div class="logo">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <div class="name ms-3">
+            <h1 class="h3 mb-1 text-white">Weather</h1>
+            <p class="fs-6 m-0 text-white">tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mt-4 ms-auto align-items-center rounded-3">
+            <li class="nav-item py-3 w-100 text-center">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item py-3 w-100 text-center">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item py-3 w-100 text-center">
+              <a class="nav-link" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item py-3 w-100 text-center">
+              <a class="nav-link" href="#">Photo</a>
+            </li>
+            <li class="nav-item py-3 w-100 text-center border-0">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="py-5 bg-image">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form class="position-relative d-flex">
+                <input
+                  type="search"
+                  class="search"
+                  placeholder="Find Your Location..."
+                  id="searchInput"
+                />
+                <button class="btn btn-primary py-3 px-5 rounded-5 btn-cus">
+                  Find
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-color pb-5">
+        <div class="container">
+          <div class="row" id="weather">
+          
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-5">
+      <div class="container">
+        <form class="position-relative d-flex mb-3">
+          <input
+            type="text"
+            class="search"
+            placeholder="Enter Your mail to Subscribe..."
+          />
+          <button class="btn btn-primary py-3 px-5 rounded-5 btn-cus" id="findBtn" type="button">
+            Subscribe
+          </button>
+        </form>
+        <div class="social d-flex gap-3 mb-2">
+          <a class="icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="icon">
+            <i class="fa-brands fa-google"></i>
+          </a>
+          <a class="icon">
+            <i class="fa-brands fa-pinterest"></i>
+          </a>
+        </div>
+        <p>
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

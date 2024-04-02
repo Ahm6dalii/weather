@@ -1,0 +1,141 @@
+* {
+  color: rgb(191, 193, 200);
+}
+a {
+
+  text-decoration: none;
+  cursor: pointer;
+}
+/*----------------Start Nav --------------*/
+nav {
+  padding: 40px;
+}
+.navbar {
+  padding-block: 60px;
+  background-color: #1e202b;
+}
+.navbar-nav {
+  background-color: #262936;
+}
+.navbar-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+}
+.navbar-nav li a,
+.navbar-nav li a:hover {
+  color: #fff;
+}
+.navbar-toggler {
+  background: none;
+  border: 2px solid transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 40px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.navbar-toggler:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show.active,
+.nav-link:active {
+  border-color: #009ad8;
+  color: #009ad8;
+}
+/*----------------End Nav --------------*/
+
+/*----------------Start Search Section --------------*/
+.main-navigation .menu-toggle {
+  background: none;
+  border: 2px solid transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 40px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: none;
+  outline: none;
+}
+.form-control {
+  /* outline: none; */
+  border: 0;
+  background-color: #1e202b;
+}
+.search {
+  padding: 26px 50px 20px 20px;
+  background: #1e202b;
+  color: white;
+  width: 100%;
+  border: 0;
+}
+input {
+  border-radius: 30px;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.1);
+}
+input:focus {
+  outline: none;
+}
+.bg-image {
+  background-image: url("../img/banner.png");
+  height: 350px;
+}
+.btn-cus {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*----------------Start Search Section --------------*/
+
+/*----------------Start Weater Box Section --------------*/
+
+.bg-color {
+  background-color: #1e202b;
+}
+.box-title {
+  background-color: #222530;
+}
+.item {
+  /* background-color: #262936; */
+  color: azure;
+  margin-top: -150px;
+}
+
+.inner {
+  background-color: #262936;
+}
+.inner h3 {
+  font-size: 6rem;
+  text-align: center;
+}
+.img-w {
+  width: 100px;
+}
+/*----------------End Weater Box Section --------------*/
+
+footer {
+  background-color: #262936;
+}
+footer a,footer a i{
+  transition: 300ms  all;
+}
+footer a:hover,
+a i:hover {
+  background-color: #009ad8;
+  color: white;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1e202b;
+}
+i {
+  font-size: 30px;
+}
