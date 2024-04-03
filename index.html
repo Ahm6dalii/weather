@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!--! --------------------Start Nav-------------------- -->
     <nav class="navbar">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -55,6 +56,9 @@
         </div>
       </div>
     </nav>
+    <!--! ---------------End Nav-------------- -->
+
+    <!--^ ------------------Start Main----------------- -->
     <main>
       <section class="py-5 bg-image">
         <div class="container">
@@ -77,11 +81,19 @@
       </section>
       <section class="bg-color pb-5">
         <div class="container">
-          <div class="row" id="weather"></div>
+          <div class="row" id="weather">
+            <div
+              class="w-100 h-100 d-flex justify-content-center align-items-center"
+            >
+              <span class="loader"></span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+    <!--^ ------------------End Main----------------- -->
 
+    <!--* ------------------Start footer----------------- -->
     <footer class="py-5">
       <div class="container">
         <form class="position-relative d-flex mb-3">
@@ -117,6 +129,8 @@
         </p>
       </div>
     </footer>
+    <!--* ------------------End footer----------------- -->
+
     <script src="./js/index.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
